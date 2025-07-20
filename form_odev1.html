@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kullanıcı Bilgi Formu</title>
+   <style>
+    form {
+      width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 4px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" method="post">
+    <h2>Kullanıcı Bilgi Formu</h2>
+
+    <label for="ad">Ad:</label>
+    <input type="text" id="ad" name="ad" required>
+
+    <label for="soyad">Soyad:</label>
+    <input type="text" id="soyad" name="soyad" required>
+
+    <label for="email">E-posta:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="sifre">Parola:</label>
+    <input type="password" id="sifre" name="sifre" required>
+
+    <label>Cinsiyet:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="cinsiyet" value="Erkek" required> Erkek</label>
+      <label><input type="radio" name="cinsiyet" value="Kadın"> Kadın</label>
+    </div>
+
+    <label for="meyve">Favori Meyveniz:</label>
+    <select id="meyve" name="meyve" required>
+      <option value="">-- Seçiniz --</option>
+      <option value="Elma">Elma</option>
+      <option value="Muz">Muz</option>
+      <option value="Çilek">Çilek</option>
+      <option value="Karpuz">Karpuz</option>
+    </select>
+
+    <label for="mesaj">Mesajınız:</label>
+    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı buraya yazınız..."></textarea>
+
+    <button type="submit">Gönder</button>
+  </form>
+
+</body>
+</html>
